@@ -1,0 +1,93 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container styling */
+form {
+    background: #ffffff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+form p {
+    color: red; /* Makes the text red */
+    font-size: 14px; /* Optional: Adjust font size */
+    margin-top: 10px; /* Optional: Add spacing from the elements above */
+    text-align: center; /* Optional: Center-align the text */
+}
+
+/* Heading */
+h1 {
+    position: relative;
+    left: -20px; /* Moves the h1 to the left */
+    color: #2c3e50;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+/* Input Field */
+input[type="file"] {
+    margin: 15px 0;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+}
+
+/* Button Styling */
+button {
+    background: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+.green-button {
+    background-color: #28a745; /* Green background */
+    color: #fff; /* White text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.green-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Status Text */
+#status {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #27ae60;
+}
+
+/* File Input Label */
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+}

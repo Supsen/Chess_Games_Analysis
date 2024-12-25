@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-players.css">
+    <script src="players.js" defer></script>
+    <title>Players List</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Players List</h1>
+        <input type="text" id="searchBox" placeholder="Search by name..." class="search-bar">
+        <div class="actions">
+            <div class="filter-section">
+                <select id="eloFilter">
+                    <option value="">Sort Elo</option>
+                    <option value="lowToHigh">Low to High</option>
+                    <option value="highToLow">High to Low</option>
+                </select>
+            
+                <select id="countryFilter">
+                    <option value="">Country (All)</option>
+                    <option value="USA">USA</option>
+                    <option value="UK">UK</option>
+                    <option value="India">India</option>
+                    <option value="India">Thailand</option>
+                    <option value="Other">Other</option>
+                </select>
+            
+                <button id="applyFilter">Apply Filter</button>
+                <a href="index.html" class="add-button">Upload PGN</a>
+            </div>
+        </div>
+    </div>
+    <table id="playersTable">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Profile Image</th>
+                <th>Name</th>
+                <th>Country</th>
+                <th>Elo</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be dynamically populated -->
+        </tbody>
+    </table>
+</body>
+</html>

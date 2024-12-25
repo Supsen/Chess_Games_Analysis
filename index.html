@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="style.css?v=1.0"> -->
+    <title>Chess Game Uploader</title>
+</head>
+<body>
+    <h1>Upload Your Game History</h1>
+    
+    <!-- Form to choose between file upload or text paste -->
+    <form id="uploadForm" enctype="multipart/form-data">
+        <div>
+            <label>
+                <input type="radio" name="uploadType" value="file" checked>
+                Upload a PGN File 
+            </label>
+            <input type="file" id="pgnFile" name="pgnFile" accept=".pgn">
+        </div>
+
+        <div>
+            <label>
+                <input type="radio" name="uploadType" value="text">
+                Paste PGN Content
+            </label>
+            <textarea id="pgnText" name="pgnText" rows="10" cols="50" placeholder="Paste your PGN content here" disabled></textarea>
+        </div>
+        <p id="errorMessage"></p>
+        <a href="players.html" class="green-button">Players List</a>
+        <button type="button" onclick="uploadFile()">Upload</button>
+    </form>
+    
+    <p id="status"></p>
+
+    <script src="script.js"></script>
+
+    <script>
+        // Enable or disable input fields based on the selected upload method
+        document.querySelectorAll('input[name="uploadType"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                const fileInput = document.getElementById('pgnFile');
+                const textInput = document.getElementById('pgnText');
+                if (this.value === 'file') {
+                    fileInput.disabled = false;
+                    textInput.disabled = true;
+                } else {
+                    fileInput.disabled = true;
+                    textInput.disabled = false;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
